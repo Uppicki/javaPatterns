@@ -1,5 +1,6 @@
 package Pattern2Observer.displauClasses;
 
+import Pattern2Observer.WeatherData;
 import Pattern2Observer.interfaces.DisplayElement;
 import Pattern2Observer.interfaces.Observer;
 import Pattern2Observer.interfaces.Subject;
@@ -26,13 +27,17 @@ public class StatisticsDisplay implements Observer, DisplayElement {
     }
 
     @Override
-    public void update(float temp, float humidity, float pressure) {
-        if (temp > maxTemp) maxTemp = temp;
-        if (temp < minTemp) minTemp = temp;
+    public void update() {
+        if (weatherData instanceof WeatherData) {
+            WeatherData wd = (WeatherData) weatherData;
+            float temp = wd.getTemperature();
+            if (temp > maxTemp) maxTemp = temp;
+            if (temp < minTemp) minTemp = temp;
 
-        tempSum += temp;
-        numReadings++;
+            tempSum += temp;
+            numReadings++;
 
-        display();
+            display();
+        }
     }
 }

@@ -1,5 +1,6 @@
 package Pattern2Observer.displauClasses;
 
+import Pattern2Observer.WeatherData;
 import Pattern2Observer.interfaces.DisplayElement;
 import Pattern2Observer.interfaces.Observer;
 import Pattern2Observer.interfaces.Subject;
@@ -29,9 +30,12 @@ public class ForecastDisplay implements Observer, DisplayElement {
     }
 
     @Override
-    public void update(float temp, float humidity, float pressure) {
-        lastPressure = currentPressure;
-        currentPressure = pressure;
-        display();
+    public void update() {
+        if (weatherData instanceof WeatherData) {
+            WeatherData wd = (WeatherData) weatherData;
+            lastPressure = currentPressure;
+            currentPressure = wd.getPressure();
+            display();
+        }
     }
 }

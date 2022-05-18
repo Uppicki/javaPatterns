@@ -19,6 +19,19 @@ public class WeatherData implements Subject {
     }
 
 
+    public float getTemperature() {
+        return temperature;
+    }
+
+    public float getHumidity() {
+        return humidity;
+    }
+
+    public float getPressure() {
+        return pressure;
+    }
+
+
     @Override
     public void registerObserver(Observer o) {
         observers.add(o);
@@ -32,7 +45,7 @@ public class WeatherData implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer o : observers)
-            o.update(temperature, humidity, pressure);
+            o.update();
     }
 
     public void setMeasurements(float temperature, float humidity, float pressure) {
