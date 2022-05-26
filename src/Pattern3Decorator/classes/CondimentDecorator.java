@@ -1,7 +1,7 @@
 package Pattern3Decorator.classes;
 
 public abstract class CondimentDecorator extends Beverage{
-    Beverage beverage;
+    protected Beverage beverage;
 
     @Override
     public abstract String getDescription();
