@@ -1,6 +1,6 @@
-package Pattern4Factory.classes.pizzez;
+package Pattern4Factory.mod1.classes.pizzez;
 
-import Pattern4Factory.interfaces.Pizza;
+import Pattern4Factory.mod1.interfaces.Pizza;
 
 public class ClamPizza implements Pizza {
     @Override

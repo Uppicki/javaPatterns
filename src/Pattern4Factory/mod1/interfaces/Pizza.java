@@ -1,4 +1,4 @@
-package Pattern4Factory.interfaces;
+package Pattern4Factory.mod1.interfaces;
 
 public interface Pizza {
     void prepare();

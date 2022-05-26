@@ -1,10 +1,10 @@
-package Pattern4Factory.classes;
+package Pattern4Factory.mod1.classes;
 
-import Pattern4Factory.classes.pizzez.CheesePizza;
-import Pattern4Factory.classes.pizzez.ClamPizza;
-import Pattern4Factory.classes.pizzez.PepperoniPizza;
-import Pattern4Factory.classes.pizzez.VeggiePizza;
-import Pattern4Factory.interfaces.Pizza;
+import Pattern4Factory.mod1.classes.pizzez.CheesePizza;
+import Pattern4Factory.mod1.classes.pizzez.ClamPizza;
+import Pattern4Factory.mod1.classes.pizzez.PepperoniPizza;
+import Pattern4Factory.mod1.classes.pizzez.VeggiePizza;
+import Pattern4Factory.mod1.interfaces.Pizza;
 
 public class SimplePizzaFactory {
     public Pizza createPizza(String type) {

@@ -1,6 +1,6 @@
-package Pattern4Factory.classes;
+package Pattern4Factory.mod2.classes;
 
-import Pattern4Factory.interfaces.Pizza;
+import Pattern4Factory.mod2.interfaces.Pizza;
 
 public class PizzaStore {
     SimplePizzaFactory factory;
