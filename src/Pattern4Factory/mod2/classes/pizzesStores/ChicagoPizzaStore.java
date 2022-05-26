@@ -8,13 +8,13 @@ public class ChicagoPizzaStore extends PizzaStore{
         Pizza pizza = null;
 
         if (type.equals("cheese")) {
-            pizza = new ChicagoCheesePizza();
+            pizza = new ChicagoStyleCheesePizza();
         } else if (type.equals("pepperoni")) {
-            pizza = new ChicagoPepperoniPizza();
+            pizza = new ChicagoStylePepperoniPizza();
         } else if (type.equals("clam")) {
-            pizza = new ChicagoClamPizza();
+            pizza = new ChicagoStyleClamPizza();
         } else if (type.equals("veggie")) {
-            pizza = new ChicagoVeggiePizza();
+            pizza = new ChicagoStyleVeggiePizza();
         }
 
         return pizza;

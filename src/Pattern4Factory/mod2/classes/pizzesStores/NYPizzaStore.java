@@ -1,5 +1,8 @@
 package Pattern4Factory.mod2.classes.pizzesStores;
 
+import Pattern4Factory.mod2.classes.pizzez.NY.NYStyleCheesePizza;
+import Pattern4Factory.mod2.classes.pizzez.NY.NYStyleClamPizza;
+import Pattern4Factory.mod2.classes.pizzez.NY.NYStylePepperoniPizza;
 import Pattern4Factory.mod2.classes.pizzez.Pizza;
 
 public class NYPizzaStore extends PizzaStore{
@@ -8,13 +11,13 @@ public class NYPizzaStore extends PizzaStore{
         Pizza pizza = null;
 
         if (type.equals("cheese")) {
-            pizza = new NYCheesePizza();
+            pizza = new NYStyleCheesePizza();
         } else if (type.equals("pepperoni")) {
-            pizza = new NYPepperoniPizza();
+            pizza = new NYStylePepperoniPizza();
         } else if (type.equals("clam")) {
-            pizza = new NYClamPizza();
+            pizza = new NYStyleClamPizza();
         } else if (type.equals("veggie")) {
-            pizza = new NYVeggiePizza();
+            pizza = new NYStyleCheesePizza();
         }
 
         return pizza;

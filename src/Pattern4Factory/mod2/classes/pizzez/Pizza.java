@@ -9,7 +9,7 @@ public abstract class Pizza {
     protected String sauce;
     protected List<String> toppings = new ArrayList<>();
 
-    void prepare() {
+    public void prepare() {
         System.out.println("Preparing " + name);
         System.out.println("Tossing dough...");
         System.out.println("Adding sauce...");
@@ -18,15 +18,15 @@ public abstract class Pizza {
             System.out.println(" " + topping);
     }
 
-    void bake() {
+    public void bake() {
         System.out.println("Bake for 25 minutes");
     }
 
-    void cut() {
+    public void cut() {
         System.out.println("Cutting the pizza into diagonal slices");
     }
 
-    void box() {
+    public void box() {
         System.out.println("Place pizza in official PizzaStore box");
     }
 
