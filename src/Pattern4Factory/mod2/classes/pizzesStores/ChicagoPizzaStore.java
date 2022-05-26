@@ -1,5 +1,9 @@
 package Pattern4Factory.mod2.classes.pizzesStores;
 
+import Pattern4Factory.mod2.classes.pizzez.Chicago.ChicagoStyleCheesePizza;
+import Pattern4Factory.mod2.classes.pizzez.Chicago.ChicagoStyleClamPizza;
+import Pattern4Factory.mod2.classes.pizzez.Chicago.ChicagoStylePepperoniPizza;
+import Pattern4Factory.mod2.classes.pizzez.Chicago.ChicagoStyleVeggiePizza;
 import Pattern4Factory.mod2.classes.pizzez.Pizza;
 
 public class ChicagoPizzaStore extends PizzaStore{
