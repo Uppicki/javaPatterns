@@ -37,11 +37,13 @@ public class MainWindow extends JFrame {
 
 
     public static void main(String[] args) {
-        MainWindow window = new MainWindow();
-
         weatherData.setMeasurements(80., 65., 30.4);
         weatherData.setMeasurements(82., 70., 29.2);
         weatherData.setMeasurements(78., 90., 29.2);
+
+
+        MainWindow window = new MainWindow();
+
 
     }
 
@@ -92,8 +94,7 @@ public class MainWindow extends JFrame {
             } else {
                 weatherLabel = new CurrentConditionsLabel(currentDisplay);
             }
-
-            weatherPanel.add(weatherLabel);
+            weatherLabel.updateUI();
 
 
                 

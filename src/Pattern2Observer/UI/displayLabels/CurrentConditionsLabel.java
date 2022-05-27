@@ -9,7 +9,7 @@ import java.util.Map;
 public class CurrentConditionsLabel extends JLabel{
     public CurrentConditionsLabel(CurrentConditionsDisplay display) {
         Map<String, Double> result = display.display();
-        String text = "<html>Current conditions:<br>"+"    Temperature:"+result.get("Temperature")+
+        String text = "<html>Current conditions:<br>"+"    Temperature:"+ result.get("Temperature") +
                 "<br>     Humidity:" + result.get("Humidity")+"</html>";
 //        String text = "<html><h2>What is Google Labs?</h2>" +
 //                "<font face=’verdana’ size = 2>" +
