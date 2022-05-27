@@ -10,21 +10,22 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class MainWindow extends JFrame {
-    String[] displays = {
+    final String[] displays = {
             "current conditions (текущие условия)",
             "forecast (прогноз)",
             "statistic (статистика)"
     };
-    private Dimension labelDimension = new Dimension(240, 130);
+    private Dimension labelDimension = new Dimension(540, 530);
     private Dimension comboBoxDimension = new Dimension(200, 20);
 
     private JComboBox<String> comboBox;
     private JPanel weatherPanel;
     private JLabel weatherLabel;
 
-    WeatherData weatherData = new WeatherData();
+    static WeatherData weatherData = new WeatherData();
 
     CurrentConditionsDisplay currentDisplay =
             new CurrentConditionsDisplay(weatherData);
@@ -37,6 +38,10 @@ public class MainWindow extends JFrame {
 
     public static void main(String[] args) {
         MainWindow window = new MainWindow();
+
+        weatherData.setMeasurements(80., 65., 30.4);
+        weatherData.setMeasurements(82., 70., 29.2);
+        weatherData.setMeasurements(78., 90., 29.2);
 
     }
 
@@ -81,6 +86,17 @@ public class MainWindow extends JFrame {
             String item = (String) comboBox.getSelectedItem();
             weatherPanel.setBorder(BorderFactory.createTitledBorder(
                     (String) comboBox.getSelectedItem()));
+            
+            if (Objects.equals(item, displays[0])) {
+                weatherLabel = new CurrentConditionsLabel(currentDisplay);
+            } else {
+                weatherLabel = new CurrentConditionsLabel(currentDisplay);
+            }
+
+            weatherPanel.add(weatherLabel);
+
+
+                
         }
     }
 
