@@ -9,9 +9,9 @@ import java.util.List;
 public class WeatherData implements Subject {
     private List<Observer> observers;
 
-    private float temperature;
-    private float humidity;
-    private float pressure;
+    private Double temperature;
+    private Double humidity;
+    private Double pressure;
 
 
     public WeatherData() {
@@ -19,15 +19,15 @@ public class WeatherData implements Subject {
     }
 
 
-    public float getTemperature() {
+    public Double getTemperature() {
         return temperature;
     }
 
-    public float getHumidity() {
+    public Double getHumidity() {
         return humidity;
     }
 
-    public float getPressure() {
+    public Double getPressure() {
         return pressure;
     }
 
@@ -48,7 +48,7 @@ public class WeatherData implements Subject {
             o.update();
     }
 
-    public void setMeasurements(float temperature, float humidity, float pressure) {
+    public void setMeasurements(Double temperature, Double humidity, Double pressure) {
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;

@@ -5,11 +5,14 @@ import Pattern2Observer.interfaces.DisplayElement;
 import Pattern2Observer.interfaces.Observer;
 import Pattern2Observer.interfaces.Subject;
 
-public class ForecastDisplay implements Observer, DisplayElement {
-    private Subject weatherData;
+import java.util.HashMap;
+import java.util.Map;
 
-    private float currentPressure = 29.92f;
-    private float lastPressure = 0.0f;
+public class ForecastDisplay implements Observer, DisplayElement {
+    private final Subject weatherData;
+
+    private Double currentPressure = 29.92;
+    private Double lastPressure = 0.0;
 
 
     public ForecastDisplay(Subject weatherData) {
@@ -19,7 +22,8 @@ public class ForecastDisplay implements Observer, DisplayElement {
 
 
     @Override
-    public void display() {
+    public Map<String, Double> display() {
+        Map<String, Double> result = new HashMap<>();
         System.out.print("Forecast: ");
         if (currentPressure > lastPressure)
             System.out.println("Improving weather on the way!");
@@ -27,6 +31,9 @@ public class ForecastDisplay implements Observer, DisplayElement {
             System.out.println("More of the same");
         else if (currentPressure < lastPressure)
             System.out.println("Watch out for cooler, rainy weather");
+        result.put("Current pressure", currentPressure);
+        result.put("Last Pressure", lastPressure);
+        return result;
     }
 
     @Override

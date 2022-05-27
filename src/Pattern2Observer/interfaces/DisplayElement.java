@@ -1,5 +1,7 @@
 package Pattern2Observer.interfaces;
 
+import java.util.Map;
+
 public interface DisplayElement {
-    void display();
+    Map<String, Double> display();
 }
